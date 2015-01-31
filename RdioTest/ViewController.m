@@ -7,21 +7,40 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+#import <CoreMedia/CoreMedia.h>
 
-@interface ViewController ()
+@interface ViewController () {
+    RDPlayer *_player;
+}
 
 @end
 
 @implementation ViewController
+
+- (RDPlayer *)player {
+    if (_player == nil) {
+        Rdio *sharedRdio = [AppDelegate rdioInstance];
+        if (sharedRdio.player == nil) {
+            [sharedRdio preparePlayerWithDelegate:nil];
+        }
+        _player = sharedRdio.player;
+    }
+    return _player;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)playButton:(UIButton *)sender
+{
+    [self.rdio preparePlayerWithDelegate:nil];
+    NSArray *sources = [NSArray arrayWithObjects:@"t1", @"p1", @"a1", nil];
+    [self.rdio.player playSources:sources];
+
 }
+
 
 @end

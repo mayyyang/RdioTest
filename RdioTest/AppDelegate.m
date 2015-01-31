@@ -8,15 +8,24 @@
 
 #import "AppDelegate.h"
 
+static AppDelegate *launchedDelegate;
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
++ (Rdio *)rdioInstance
+{
+    return launchedDelegate.rdio;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _rdio = [[Rdio alloc] initWithConsumerKey:@"gvrzny2hjqstkmgts9m929bk" andSecret:@"HvU4tfpcYp" delegate:nil];
+    [self.rdio preparePlayerWithDelegate:nil];
+//    [self.rdio.player playSource:@"t1"];
     return YES;
 }
 

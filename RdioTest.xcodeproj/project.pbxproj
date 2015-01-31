@@ -14,6 +14,13 @@
 		FBDBE73F1A7C98CA006997D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBDBE73E1A7C98CA006997D4 /* Images.xcassets */; };
 		FBDBE7421A7C98CA006997D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBDBE7401A7C98CA006997D4 /* LaunchScreen.xib */; };
 		FBDBE74E1A7C98CA006997D4 /* RdioTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBE74D1A7C98CA006997D4 /* RdioTestTests.m */; };
+		FBDBE7581A7C990B006997D4 /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE7571A7C990B006997D4 /* Rdio.framework */; };
+		FBDBE75A1A7C991D006997D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE7591A7C991D006997D4 /* AudioToolbox.framework */; };
+		FBDBE75C1A7C9924006997D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE75B1A7C9924006997D4 /* CFNetwork.framework */; };
+		FBDBE75E1A7C992B006997D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE75D1A7C992B006997D4 /* CoreGraphics.framework */; };
+		FBDBE7601A7C9933006997D4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE75F1A7C9933006997D4 /* CoreMedia.framework */; };
+		FBDBE7621A7C993B006997D4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE7611A7C993B006997D4 /* Security.framework */; };
+		FBDBE7641A7C9942006997D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE7631A7C9942006997D4 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,13 @@
 		FBDBE7471A7C98CA006997D4 /* RdioTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RdioTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDBE74C1A7C98CA006997D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBDBE74D1A7C98CA006997D4 /* RdioTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RdioTestTests.m; sourceTree = "<group>"; };
+		FBDBE7571A7C990B006997D4 /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rdio.framework; path = "../../../../Downloads/rdio-ios-2.1.4 2/Rdio.framework"; sourceTree = "<group>"; };
+		FBDBE7591A7C991D006997D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FBDBE75B1A7C9924006997D4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FBDBE75D1A7C992B006997D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FBDBE75F1A7C9933006997D4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FBDBE7611A7C993B006997D4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FBDBE7631A7C9942006997D4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDBE7641A7C9942006997D4 /* SystemConfiguration.framework in Frameworks */,
+				FBDBE7621A7C993B006997D4 /* Security.framework in Frameworks */,
+				FBDBE7601A7C9933006997D4 /* CoreMedia.framework in Frameworks */,
+				FBDBE75E1A7C992B006997D4 /* CoreGraphics.framework in Frameworks */,
+				FBDBE75C1A7C9924006997D4 /* CFNetwork.framework in Frameworks */,
+				FBDBE75A1A7C991D006997D4 /* AudioToolbox.framework in Frameworks */,
+				FBDBE7581A7C990B006997D4 /* Rdio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,13 @@
 		FBDBE7251A7C98CA006997D4 = {
 			isa = PBXGroup;
 			children = (
+				FBDBE7631A7C9942006997D4 /* SystemConfiguration.framework */,
+				FBDBE7611A7C993B006997D4 /* Security.framework */,
+				FBDBE75F1A7C9933006997D4 /* CoreMedia.framework */,
+				FBDBE75D1A7C992B006997D4 /* CoreGraphics.framework */,
+				FBDBE75B1A7C9924006997D4 /* CFNetwork.framework */,
+				FBDBE7591A7C991D006997D4 /* AudioToolbox.framework */,
+				FBDBE7571A7C990B006997D4 /* Rdio.framework */,
 				FBDBE7301A7C98CA006997D4 /* RdioTest */,
 				FBDBE74A1A7C98CA006997D4 /* RdioTestTests */,
 				FBDBE72F1A7C98CA006997D4 /* Products */,
@@ -343,8 +371,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/mayyang/Downloads/rdio-ios-2.1.4",
+					2,
+				);
 				INFOPLIST_FILE = RdioTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -353,8 +387,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/mayyang/Downloads/rdio-ios-2.1.4",
+					2,
+				);
 				INFOPLIST_FILE = RdioTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

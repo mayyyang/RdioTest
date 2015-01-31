@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Rdio/Rdio.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <RdioDelegate, RDPlayerDelegate>
+@property (readonly) Rdio *rdio;
 
 @end
 
