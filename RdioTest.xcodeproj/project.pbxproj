@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB9868571A7D821E009AB4E7 /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9868561A7D821E009AB4E7 /* Rdio.framework */; };
 		FBDBE7341A7C98CA006997D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBE7331A7C98CA006997D4 /* main.m */; };
 		FBDBE7371A7C98CA006997D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBE7361A7C98CA006997D4 /* AppDelegate.m */; };
 		FBDBE73A1A7C98CA006997D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBE7391A7C98CA006997D4 /* ViewController.m */; };
@@ -14,7 +15,6 @@
 		FBDBE73F1A7C98CA006997D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBDBE73E1A7C98CA006997D4 /* Images.xcassets */; };
 		FBDBE7421A7C98CA006997D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBDBE7401A7C98CA006997D4 /* LaunchScreen.xib */; };
 		FBDBE74E1A7C98CA006997D4 /* RdioTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBE74D1A7C98CA006997D4 /* RdioTestTests.m */; };
-		FBDBE7581A7C990B006997D4 /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE7571A7C990B006997D4 /* Rdio.framework */; };
 		FBDBE75A1A7C991D006997D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE7591A7C991D006997D4 /* AudioToolbox.framework */; };
 		FBDBE75C1A7C9924006997D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE75B1A7C9924006997D4 /* CFNetwork.framework */; };
 		FBDBE75E1A7C992B006997D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDBE75D1A7C992B006997D4 /* CoreGraphics.framework */; };
@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB9868561A7D821E009AB4E7 /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rdio.framework; sourceTree = "<group>"; };
 		FBDBE72E1A7C98CA006997D4 /* RdioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RdioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDBE7321A7C98CA006997D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBDBE7331A7C98CA006997D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,7 +68,7 @@
 				FBDBE75E1A7C992B006997D4 /* CoreGraphics.framework in Frameworks */,
 				FBDBE75C1A7C9924006997D4 /* CFNetwork.framework in Frameworks */,
 				FBDBE75A1A7C991D006997D4 /* AudioToolbox.framework in Frameworks */,
-				FBDBE7581A7C990B006997D4 /* Rdio.framework in Frameworks */,
+				FB9868571A7D821E009AB4E7 /* Rdio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +85,7 @@
 		FBDBE7251A7C98CA006997D4 = {
 			isa = PBXGroup;
 			children = (
+				FB9868561A7D821E009AB4E7 /* Rdio.framework */,
 				FBDBE7631A7C9942006997D4 /* SystemConfiguration.framework */,
 				FBDBE7611A7C993B006997D4 /* Security.framework */,
 				FBDBE75F1A7C9933006997D4 /* CoreMedia.framework */,
@@ -375,6 +377,7 @@
 					"$(inherited)",
 					"/Users/mayyang/Downloads/rdio-ios-2.1.4",
 					2,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RdioTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -391,6 +394,7 @@
 					"$(inherited)",
 					"/Users/mayyang/Downloads/rdio-ios-2.1.4",
 					2,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RdioTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -452,6 +456,7 @@
 				FBDBE7531A7C98CB006997D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FBDBE7541A7C98CB006997D4 /* Build configuration list for PBXNativeTarget "RdioTestTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +465,7 @@
 				FBDBE7561A7C98CB006997D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

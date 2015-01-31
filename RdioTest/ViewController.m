@@ -18,16 +18,16 @@
 
 @implementation ViewController
 
-- (RDPlayer *)player {
-    if (_player == nil) {
-        Rdio *sharedRdio = [AppDelegate rdioInstance];
-        if (sharedRdio.player == nil) {
-            [sharedRdio preparePlayerWithDelegate:nil];
-        }
-        _player = sharedRdio.player;
-    }
-    return _player;
-}
+//- (RDPlayer *)player {
+//    if (_player == nil) {
+//        Rdio *sharedRdio = [AppDelegate rdioInstance];
+//        if (sharedRdio.player == nil) {
+//            [sharedRdio preparePlayerWithDelegate:nil];
+//        }
+//        _player = sharedRdio.player;
+//    }
+//    return _player;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,9 +36,9 @@
 
 - (IBAction)playButton:(UIButton *)sender
 {
+    _rdio = [[Rdio alloc] initWithConsumerKey:@"gvrzny2hjqstkmgts9m929bk" andSecret:@"HvU4tfpcYp" delegate:nil];
     [self.rdio preparePlayerWithDelegate:nil];
-    NSArray *sources = [NSArray arrayWithObjects:@"t1", @"p1", @"a1", nil];
-    [self.rdio.player playSources:sources];
+    [self.rdio.player playSource:@"t1"];
 
 }
 
