@@ -23,9 +23,10 @@ static AppDelegate *launchedDelegate;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    launchedDelegate = self;
+    
     _rdio = [[Rdio alloc] initWithConsumerKey:@"gvrzny2hjqstkmgts9m929bk" andSecret:@"HvU4tfpcYp" delegate:nil];
-//    [self.rdio preparePlayerWithDelegate:nil];
-//    [self.rdio.player playSource:@"t1"];
     return YES;
 }
 

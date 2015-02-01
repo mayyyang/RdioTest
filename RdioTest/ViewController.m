@@ -29,8 +29,8 @@
 
 
 - (IBAction)listenButton:(UIButton *)sender
-{    
-    _rdio = [[Rdio alloc] initWithConsumerKey:@"gvrzny2hjqstkmgts9m929bk" andSecret:@"HvU4tfpcYp" delegate:nil];
+{
+    _rdio = [AppDelegate rdioInstance];
     [self.rdio preparePlayerWithDelegate:nil];
     [self.rdio.player playSource:@"p12691138"];
 

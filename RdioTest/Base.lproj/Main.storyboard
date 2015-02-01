@@ -104,7 +104,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="websiteButton:forEvent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Rw-5X-V5F"/>
                                     <segue destination="xCF-7M-pZN" kind="modal" id="CNU-D0-Bfm"/>
                                 </connections>
                             </button>
@@ -157,10 +156,20 @@
                                     <action selector="dismissButton:" destination="xCF-7M-pZN" eventType="touchUpInside" id="lww-pd-M5a"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9cs-U3-sdi">
+                                <rect key="frame" x="150" y="303" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="9cs-U3-sdi" secondAttribute="trailing" constant="134" id="2Bm-yN-zmW"/>
+                            <constraint firstItem="9cs-U3-sdi" firstAttribute="top" secondItem="8TR-ag-QLf" secondAttribute="bottom" constant="283" id="JgH-zM-uBh"/>
+                            <constraint firstItem="fPI-57-Cfh" firstAttribute="top" secondItem="9cs-U3-sdi" secondAttribute="bottom" constant="245" id="OCf-dA-UBg"/>
+                            <constraint firstItem="9cs-U3-sdi" firstAttribute="leading" secondItem="Lad-qI-GGD" secondAttribute="leadingMargin" constant="134" id="bWg-Pp-T9F"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="9cs-U3-sdi" id="lbj-qg-IoH"/>
                         <outlet property="webView" destination="JyU-b2-1To" id="BLW-8M-MWU"/>
                     </connections>
                 </viewController>
@@ -180,32 +189,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YM-jk-hup">
-                                <rect key="frame" x="16" y="20" width="26" height="31"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="X">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dismissButton:" destination="RIf-SX-cZz" eventType="touchUpInside" id="N75-nx-plU"/>
-                                </connections>
-                            </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ztL-2j-6Yg">
-                                <rect key="frame" x="16" y="52" width="288" height="479"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q55-dk-T0f">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQA-lM-1UG">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="479"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBm-CX-0t5">
+                                        <rect key="frame" x="8" y="0.0" width="304" height="516"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="01.">
-                                                <attributes>
-                                                    <font key="NSFont" size="13" name="CourierNewPSMT"/>
-                                                    <font key="NSOriginalFont" size="13" name="CourierNewPSMT"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
                                             <fragment>
-                                                <string key="content">	The New Pornographers - Brill Bruisers
+                                                <string key="content">01.	The New Pornographers - Brill Bruisers
 02.	Caribou - Can’t Do Without You
 03.	Caribou - Silver
 04.	Caribou - Odessa
@@ -251,7 +243,7 @@
 44.	Blackbird Blackbird - Pure
 45.	Blackbird Blackbird - Hawaii (Niva Remix)</string>
                                                 <attributes>
-                                                    <font key="NSFont" size="13" name="CourierNewPSMT"/>
+                                                    <font key="NSFont" size="12" name="CourierNewPSMT"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
@@ -259,15 +251,34 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="39Q-fa-ZOm"/>
+                                    <constraint firstAttribute="height" constant="524" id="d3F-VL-AvF"/>
+                                </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YM-jk-hup">
+                                <rect key="frame" x="16" y="20" width="26" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButton:" destination="RIf-SX-cZz" eventType="touchUpInside" id="N75-nx-plU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="95z-SA-h3q" firstAttribute="top" secondItem="Q55-dk-T0f" secondAttribute="bottom" id="2A4-Pr-8fS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q55-dk-T0f" secondAttribute="trailing" constant="-16" id="6dU-e9-8m0"/>
+                            <constraint firstItem="Q55-dk-T0f" firstAttribute="leading" secondItem="mb4-74-JMY" secondAttribute="leadingMargin" constant="-16" id="Mqq-TO-3Aq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oCW-TA-o8z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgs-ii-Bz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621" y="246"/>
+            <point key="canvasLocation" x="623" y="256"/>
         </scene>
     </scenes>
     <resources>
