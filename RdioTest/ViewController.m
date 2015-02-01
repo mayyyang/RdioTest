@@ -15,6 +15,7 @@
 @property BOOL paused;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
+@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
 
 @end
 
@@ -23,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.testButton setImage:[UIImage imageNamed:@"play-50.png"] forState:UIControlStateSelected | UIControlStateHighlighted];
+    
 }
 
 
@@ -54,12 +55,13 @@
     [self.rdio.player play];
 }
 
-
-
-- (void)rdioPlayerChangedFromState:(RDPlayerState)oldState toState:(RDPlayerState)newState
+- (void)updateCurrentTrackRequest:(RDAPIRequest *)request didLoadData:(NSDictionary *)data
 {
-    self.playing = (newState != RDPlayerStateInitializing && newState != RDPlayerStateStopped);
-    self.paused = (newState);
+    NSString *trackKey = [request.parameters objectForKey:@"keys"];
+    NSDictionary *metadata = [data objectForKey:trackKey];
+    [self.artistLabel setText:[metadata objectForKey:@"artist"]];
 }
+
+
 
 @end
