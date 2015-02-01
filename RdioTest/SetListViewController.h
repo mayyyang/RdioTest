@@ -1,5 +1,5 @@
 //
-//  SetlistViewController.h
+//  SetListViewController.h
 //  RdioTest
 //
 //  Created by May Yang on 1/31/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SetlistViewController : UIViewController
+@interface SetListViewController : UIViewController
 
 @end

@@ -11,11 +11,6 @@
 #import <CoreMedia/CoreMedia.h>
 
 @interface ViewController ()
-@property BOOL playing;
-@property BOOL paused;
-@property (weak, nonatomic) IBOutlet UIButton *playButton;
-@property (weak, nonatomic) IBOutlet UIButton *testButton;
-@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
 
 @end
 
@@ -53,18 +48,6 @@
 - (IBAction)playButton:(UIButton *)sender
 {
     [self.rdio.player play];
-}
-- (IBAction)websiteButton:(UIButton *)sender forEvent:(UIEvent *)event
-{
-  
-
-}
-
-- (void)updateCurrentTrackRequest:(RDAPIRequest *)request didLoadData:(NSDictionary *)data
-{
-    NSString *trackKey = [request.parameters objectForKey:@"keys"];
-    NSDictionary *metadata = [data objectForKey:trackKey];
-    [self.artistLabel setText:[metadata objectForKey:@"artist"]];
 }
 
 
