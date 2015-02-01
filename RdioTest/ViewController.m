@@ -54,6 +54,11 @@
 {
     [self.rdio.player play];
 }
+- (IBAction)websiteButton:(UIButton *)sender forEvent:(UIEvent *)event
+{
+  
+
+}
 
 - (void)updateCurrentTrackRequest:(RDAPIRequest *)request didLoadData:(NSDictionary *)data
 {

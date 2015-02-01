@@ -85,6 +85,29 @@
                                     <constraint firstAttribute="width" constant="288" id="e4T-gg-2bA"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoS-Dr-LpE">
+                                <rect key="frame" x="120" y="382" width="81" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="setlist">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RIf-SX-cZz" kind="modal" id="ira-Ic-4vE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFh-HJ-zpV">
+                                <rect key="frame" x="105" y="411" width="111" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="website">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="websiteButton:forEvent:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Rw-5X-V5F"/>
+                                    <segue destination="xCF-7M-pZN" kind="modal" id="CNU-D0-Bfm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -106,6 +129,145 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="234" y="246"/>
+        </scene>
+        <!--Website View Controller-->
+        <scene sceneID="nKc-uc-sEV">
+            <objects>
+                <viewController id="xCF-7M-pZN" customClass="WebsiteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8TR-ag-QLf"/>
+                        <viewControllerLayoutGuide type="bottom" id="fPI-57-Cfh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lad-qI-GGD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JyU-b2-1To">
+                                <rect key="frame" x="0.0" y="58" width="320" height="510"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltv-0G-rPH">
+                                <rect key="frame" x="16" y="20" width="26" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButton:" destination="RIf-SX-cZz" eventType="touchUpInside" id="6gm-xq-bSX"/>
+                                    <action selector="dismissButton:" destination="xCF-7M-pZN" eventType="touchUpInside" id="lww-pd-M5a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="JyU-b2-1To" id="BLW-8M-MWU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJ5-sH-L72" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="883"/>
+        </scene>
+        <!--Setlist View Controller-->
+        <scene sceneID="Ibd-1c-tAu">
+            <objects>
+                <viewController id="RIf-SX-cZz" customClass="SetlistViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eAT-qL-FWR"/>
+                        <viewControllerLayoutGuide type="bottom" id="95z-SA-h3q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mb4-74-JMY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YM-jk-hup">
+                                <rect key="frame" x="16" y="20" width="26" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButton:" destination="RIf-SX-cZz" eventType="touchUpInside" id="N75-nx-plU"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ztL-2j-6Yg">
+                                <rect key="frame" x="16" y="52" width="288" height="479"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQA-lM-1UG">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="479"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="01.">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="CourierNewPSMT"/>
+                                                    <font key="NSOriginalFont" size="13" name="CourierNewPSMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">	The New Pornographers - Brill Bruisers
+02.	Caribou - Can’t Do Without You
+03.	Caribou - Silver
+04.	Caribou - Odessa
+05.	Caribou - Our Love
+06.	Caribou - All I Ever Need
+07.	Caribou - Back Home
+08.	Caribou - Best Coast - The Only Place
+09.	Geographer - Animal Shapes
+10.	Flight Facilities - Crave You
+11.	Flight Facilities - Crave You (Adventure Club Remix)
+12.	Dan Deacon - Feel the Lightning
+13.	Thao &amp; The Get Down Stay Down - Bag of Hammers
+14. 	How to Dress Well - Cold Nites
+15.	Cathedrals - Harlem
+16.	James Vincent McMorrow - If I Had A Boat
+17.	Slow Magic - Corvette Cassette
+18.	Giraffage - Feels
+19.	Giraffage - Tell Me
+20.	Giraffage - Even Though (feat. XXYYXX)
+21.	The Church - Under the Milky Way
+22.	Kindness - House
+23.	Kindness - Swingin’ Party (Drumless)
+24.	Surfer Blood - Prom Song
+25.	Surfer Blood - Floating Vibes
+26. 	Les Sins - Youth Gone
+27.	Les Sins - Why (feat. Nate Salman)
+28.	Les Sins - Bother
+29.	Les Sins - Talk About
+30.	!!! - Slyd
+31.	Grouper - Stuck
+32.	Foxes in Fiction - 15 Ativan (Song for Erika)
+33.	Own Pallett - I Am Not Afraid
+34. 	Spazzkid - Getting to Know You
+35.	Spazzkid - Kokeshi Doll
+36.	Spazzkid - Lovers
+37.	Spazzkid - Truly (feat. Sarah Bonito)
+38.	Spazzkid - 40 Winks
+39.	Spazzkid - Promise
+40.	Spazzkid - Promise (Demicat Remix)
+41.	Spazzkid - Forgiveness
+42.	Spazzkid - If Not You Then Who
+43.	Tycho - Montana (Christopher Willits Remix)
+44.	Blackbird Blackbird - Pure
+45.	Blackbird Blackbird - Hawaii (Niva Remix)</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="CourierNewPSMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oCW-TA-o8z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qgs-ii-Bz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621" y="246"/>
         </scene>
     </scenes>
     <resources>

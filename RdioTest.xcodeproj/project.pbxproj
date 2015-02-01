@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB4293411A7DD13C00D88B64 /* SetlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4293401A7DD13C00D88B64 /* SetlistViewController.m */; };
+		FB4293441A7DDA1900D88B64 /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4293431A7DDA1900D88B64 /* WebsiteViewController.m */; };
 		FB9868571A7D821E009AB4E7 /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9868561A7D821E009AB4E7 /* Rdio.framework */; };
 		FBDBE7341A7C98CA006997D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBE7331A7C98CA006997D4 /* main.m */; };
 		FBDBE7371A7C98CA006997D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDBE7361A7C98CA006997D4 /* AppDelegate.m */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB42933F1A7DD13C00D88B64 /* SetlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetlistViewController.h; sourceTree = "<group>"; };
+		FB4293401A7DD13C00D88B64 /* SetlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetlistViewController.m; sourceTree = "<group>"; };
+		FB4293421A7DDA1900D88B64 /* WebsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteViewController.h; sourceTree = "<group>"; };
+		FB4293431A7DDA1900D88B64 /* WebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteViewController.m; sourceTree = "<group>"; };
 		FB9868561A7D821E009AB4E7 /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rdio.framework; sourceTree = "<group>"; };
 		FBDBE72E1A7C98CA006997D4 /* RdioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RdioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDBE7321A7C98CA006997D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +121,10 @@
 				FBDBE7361A7C98CA006997D4 /* AppDelegate.m */,
 				FBDBE7381A7C98CA006997D4 /* ViewController.h */,
 				FBDBE7391A7C98CA006997D4 /* ViewController.m */,
+				FB42933F1A7DD13C00D88B64 /* SetlistViewController.h */,
+				FB4293401A7DD13C00D88B64 /* SetlistViewController.m */,
+				FB4293421A7DDA1900D88B64 /* WebsiteViewController.h */,
+				FB4293431A7DDA1900D88B64 /* WebsiteViewController.m */,
 				FBDBE73B1A7C98CA006997D4 /* Main.storyboard */,
 				FBDBE73E1A7C98CA006997D4 /* Images.xcassets */,
 				FBDBE7401A7C98CA006997D4 /* LaunchScreen.xib */,
@@ -250,7 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBDBE73A1A7C98CA006997D4 /* ViewController.m in Sources */,
+				FB4293411A7DD13C00D88B64 /* SetlistViewController.m in Sources */,
 				FBDBE7371A7C98CA006997D4 /* AppDelegate.m in Sources */,
+				FB4293441A7DDA1900D88B64 /* WebsiteViewController.m in Sources */,
 				FBDBE7341A7C98CA006997D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
