@@ -17,23 +17,78 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOX-vC-ycF">
-                                <rect key="frame" x="137" y="199" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="89" y="174" width="143" height="82"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                <state key="normal" title="start">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="T9R-4A-Nx8"/>
+                                    <action selector="listenButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="65z-xy-yOt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRA-JU-ezD">
+                                <rect key="frame" x="101" y="309" width="50" height="50"/>
+                                <state key="normal" image="previous">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="previousselected"/>
+                                <connections>
+                                    <action selector="previousButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GXp-d8-qGZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAu-uO-Zh3">
+                                <rect key="frame" x="89" y="246" width="74" height="55"/>
+                                <state key="normal" image="playbutton"/>
+                                <state key="selected" image="pausebutton"/>
+                                <state key="highlighted" image="playselected"/>
+                                <connections>
+                                    <action selector="playButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YsN-J2-ntM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPu-en-7q3">
+                                <rect key="frame" x="146" y="251" width="101" height="50"/>
+                                <state key="normal" image="pausebutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="pauseselected"/>
+                                <state key="highlighted" image="pauseselected"/>
+                                <connections>
+                                    <action selector="pauseButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1gp-ut-YM2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaJ-De-JXy">
+                                <rect key="frame" x="177" y="309" width="50" height="50"/>
+                                <state key="normal" image="next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="nextselected"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eMX-e7-tey"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="playButton" destination="yAu-uO-Zh3" id="MGO-OX-FT1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234.66666666666666" y="246.13333333333333"/>
+            <point key="canvasLocation" x="234" y="246"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="next" width="128" height="128"/>
+        <image name="nextselected" width="128" height="128"/>
+        <image name="pausebutton" width="50" height="50"/>
+        <image name="pauseselected" width="50" height="50"/>
+        <image name="playbutton" width="50" height="50"/>
+        <image name="playselected" width="50" height="50"/>
+        <image name="previous" width="128" height="128"/>
+        <image name="previousselected" width="128" height="128"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

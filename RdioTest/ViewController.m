@@ -10,37 +10,56 @@
 #import "AppDelegate.h"
 #import <CoreMedia/CoreMedia.h>
 
-@interface ViewController () {
-    RDPlayer *_player;
-}
+@interface ViewController ()
+@property BOOL playing;
+@property BOOL paused;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
 
 @end
 
 @implementation ViewController
 
-//- (RDPlayer *)player {
-//    if (_player == nil) {
-//        Rdio *sharedRdio = [AppDelegate rdioInstance];
-//        if (sharedRdio.player == nil) {
-//            [sharedRdio preparePlayerWithDelegate:nil];
-//        }
-//        _player = sharedRdio.player;
-//    }
-//    return _player;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self.testButton setImage:[UIImage imageNamed:@"play-50.png"] forState:UIControlStateSelected | UIControlStateHighlighted];
+}
+
+
+- (IBAction)listenButton:(UIButton *)sender
+{    
+    _rdio = [[Rdio alloc] initWithConsumerKey:@"gvrzny2hjqstkmgts9m929bk" andSecret:@"HvU4tfpcYp" delegate:nil];
+    [self.rdio preparePlayerWithDelegate:nil];
+    [self.rdio.player playSource:@"p12691138"];
+
+}
+- (IBAction)pauseButton:(UIButton *)sender
+{
+    [self.rdio.player togglePause];
+}
+
+- (IBAction)nextButton:(UIButton *)sender
+{
+    [self.rdio.player next];
+}
+
+- (IBAction)previousButton:(UIButton *)sender
+{
+    [self.rdio.player previous];
 }
 
 - (IBAction)playButton:(UIButton *)sender
 {
-    _rdio = [[Rdio alloc] initWithConsumerKey:@"gvrzny2hjqstkmgts9m929bk" andSecret:@"HvU4tfpcYp" delegate:nil];
-    [self.rdio preparePlayerWithDelegate:nil];
-    [self.rdio.player playSource:@"t1"];
-
+    [self.rdio.player play];
 }
 
+
+
+- (void)rdioPlayerChangedFromState:(RDPlayerState)oldState toState:(RDPlayerState)newState
+{
+    self.playing = (newState != RDPlayerStateInitializing && newState != RDPlayerStateStopped);
+    self.paused = (newState);
+}
 
 @end
